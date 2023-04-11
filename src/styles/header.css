@@ -1,6 +1,8 @@
 .header {
     display: flex;
     justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -41,4 +43,24 @@
 
 .lien-navigation:first-child {
     margin-right: 50px;
+}
+
+.div-banner{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/IMG.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.h2-banner{
+    opacity: 1;
+    color: white;
+    font-size: 48px;
+    font-family: 'Raleway', sans-serif;
 }
