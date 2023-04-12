@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../Components/header/Header';
 import Banner from '../Components/header/Banner'
 import Footer from '../Components/footer/Footer';
-import Location from '../Components/main/Location';
+import Container from '../Components/main/Container';
 
 
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
         <React.Fragment>
             <Header />
             <Banner />
-            <Location />
+            <Container />
             <Footer />
         </React.Fragment>
     )
