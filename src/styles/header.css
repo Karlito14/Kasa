@@ -41,7 +41,7 @@
     text-decoration: underline;
 }
 
-.lien-navigation:first-child {
+.lien-navigation:nth-child(1) {
     margin-right: 50px;
 }
 
@@ -63,4 +63,40 @@
     color: white;
     font-size: 3em;
     font-family: 'Raleway', sans-serif;
+}
+
+@media screen and (max-width: 750px) {
+    .h2-banner {
+        font-size: 24px;
+        margin-left: 15px;
+        width: 60%;
+    }
+    .div-banner {
+        justify-content: flex-start;
+    }
+
+    .lien-navigation:nth-child(1) {
+        margin-right: 20px;
+    }
+
+    .logo-h1{
+        font-size: 28px;
+    }
+
+    .logo-img img{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .container .ul-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+    
+    .div-banner{
+        height: 110px;
+    }
 }

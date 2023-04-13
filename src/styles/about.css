@@ -4,6 +4,10 @@
     font-family: 'Raleway', sans-serif;
 }
 
+.div-dropdown ul {
+    padding: 0;
+}
+
 .titre-deroulant{
     background-color: #FF6060;
     color: white;
@@ -41,4 +45,10 @@
 
 li {
     list-style-type: none;
+}
+
+@media screen and (max-width: 650px) {
+    .div-dropdown{
+        width: 90%;
+    }
 }

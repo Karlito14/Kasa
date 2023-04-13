@@ -4,12 +4,11 @@
     width: 90%;
     margin: 0 auto;
     font-family: 'Raleway', sans-serif;
-
 }
 
 .ul-grid{
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
     padding: 30px;
 }
@@ -24,7 +23,6 @@
     width: 100%;
     border-radius: 10px;
     height: 190px;
-    
 }
 
 .titre-location{
