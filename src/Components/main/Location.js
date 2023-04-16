@@ -13,7 +13,7 @@ const Location = () =>{
             setLocations(result);
         })
     }, []);
-
+    
     return (
         <div className='ul-grid'>
             {locations.map(({id, title, cover}) => {

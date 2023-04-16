@@ -37,3 +37,85 @@
     color: white;
     font-weight: 500;
 }
+
+.info{
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    color: #FF6060;
+    margin-top: 30px;
+}
+
+.title-logement{
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.localisation-logement{
+    margin-top: 0px;
+    font-weight: 500;
+}
+
+.liste-tag{
+    padding-left: 0px;
+}
+
+.tag-logement{
+    background-color: #FF6060;
+    color: white;
+    display: inline-block;
+    padding: 5px 40px;
+    margin-right: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.info-hote{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.img-hote{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.nom-hote{
+    text-align: right;
+}
+
+.div-etoiles{
+    text-align: right;
+}
+
+.etoile-logement{
+    margin-right: 15px;
+}
+
+@media screen and (max-width: 750px) {
+    .info {
+        flex-direction: column;
+    }
+    .info-hote{
+        justify-content: flex-start;
+    }
+
+    .div-etoiles{
+        text-align: left;
+    }
+
+    .flex-droite{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+}

@@ -6,7 +6,6 @@ import '../../styles/fiche-logement.css';
 const Caroussel = ({location}) => {
     const [index, setIndex] = useState(0);
     const pictures = location.pictures;
-    console.log(location)
 
     const imagePrecedente = () => {
         const newIndex = index - 1;
@@ -18,22 +17,19 @@ const Caroussel = ({location}) => {
         setIndex(newIndex >= pictures.length ? 0 : newIndex)
     }
     
-    if(pictures.length > 0) {
-        return (
-            <div className="carrousel">
-                <img src={precedent} alt="fleche-precedent" className="fleche-precedent" onClick={imagePrecedente}/>
-                <img src={pictures[index]} alt={location.title} className="img-carrousel"/>
-                <img src={suivant} alt="fleche-suivant" className="fleche-suivant" onClick={imageSuivante}/>
-                <p className="p-img">{`${index + 1}/${pictures.length}`}</p>
-            </div>
-        )
-    } else {
-        return (
-            <div className="carrousel">
-                <img src={pictures[index]} alt={location.title} className="img-carrousel"/>
-            </div>
-        )
-    }
+    return pictures.length !== 1 ? (
+        <div className="carrousel">
+            <img src={precedent} alt="fleche-precedent" className="fleche-precedent" onClick={imagePrecedente}/>
+            <img src={pictures[index]} alt={location.title} className="img-carrousel"/>
+            <img src={suivant} alt="fleche-suivant" className="fleche-suivant" onClick={imageSuivante}/>
+            <p className="p-img">{`${index + 1}/${pictures.length}`}</p>
+        </div>
+    ) : (
+        <div className="carrousel">
+            <img src={pictures[index]} alt={location.title} className="img-carrousel"/>
+        </div>
+    )
+    
 }
 
 export default Caroussel;

@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Caroussel from "./Caroussel";
+import Info from "./Info-logement";
 
 const Fiche = () => {
     // Je récupère le ID de la fiche sélectionnée
@@ -18,12 +19,16 @@ const Fiche = () => {
     },[]);
 
     // J'utilise la méthode find pour récupérer l'objet qui correspond à mon ID
-    const locationSelected = locations.find(element => element.id === id);
+    let locationSelected = locations.find(element => element.id === id);
     
-    return (
-        <Caroussel location={locationSelected}/>
-    )
-    
+    return locations.length === 0 ? (
+        <div><p>Loading...</p></div>
+    ) : (
+        <React.Fragment>
+            <Caroussel location={locationSelected}/>
+            <Info location={locationSelected} />
+        </React.Fragment>
+    )  
 }
 
 export default Fiche;
