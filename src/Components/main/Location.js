@@ -3,10 +3,11 @@ import { NavLink } from 'react-router-dom';
 import '../../styles/main.css';
 
 const Location = () =>{
+    // Je récupère l'ensemble des locations avec useState et useEffect
     const [locations, setLocations] = useState([]);
     
     useEffect(() => {
-        fetch('locations.json')
+        fetch('/locations.json')
         .then(res => res.json())
         .then((result) => {
             setLocations(result);
@@ -28,6 +29,5 @@ const Location = () =>{
         </div>
     );
 }
-
 
 export default Location;

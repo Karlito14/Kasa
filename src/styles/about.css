@@ -47,6 +47,16 @@ li {
     list-style-type: none;
 }
 
+.banner-about{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/banniere-about.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    height: 220px;
+    width: 90%;
+    margin: 0 auto 40px;
+}
+
 @media screen and (max-width: 650px) {
     .div-dropdown{
         width: 90%;

@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <React.Fragment>
             <Header />
-            <Banner title='Chez vous, partout et ailleurs' />
+            <Banner title='Chez vous, partout et ailleurs' className='div-banner' />
             <Container />
             <Footer />
         </React.Fragment>

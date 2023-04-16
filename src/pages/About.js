@@ -3,7 +3,6 @@ import Header from '../Components/header/Header';
 import Banner from '../Components/header/Banner';
 import Footer from '../Components/footer/Footer';
 import DropDown from '../Components/about/Dropdown';
-import montagne from '../images/banniere-about.png';
 
 const recommandation = [
     {
@@ -32,14 +31,13 @@ const About = () => {
     return (
         <React.Fragment>
             <Header />
-            <Banner title={null} />
+            <Banner title={null} className='banner-about' />
             <div className='div-dropdown'>
                 <ul>
                     {recommandation.map(({ key, title, description}) => (
                         <li key={key}>
                             <DropDown title={title} description={description} />
-                        </li>
-                        
+                        </li> 
                     ))}
                 </ul>
             </div>

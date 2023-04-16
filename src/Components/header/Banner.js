@@ -1,9 +1,9 @@
 import React from 'react';
 import '../../styles/header.css';
 
-const Banner = ({title}) => {
+const Banner = ({title, className}) => {
     return (
-        <div className='div-banner'>
+        <div className={className}>
             <h2 className='h2-banner'>{title}</h2>
         </div>
     )
