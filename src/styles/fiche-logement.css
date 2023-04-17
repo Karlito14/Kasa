@@ -100,6 +100,46 @@
     margin-right: 15px;
 }
 
+.div-description-equipement{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-description, .div-equipements{
+    width: 50%;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+}
+
+.div-description:nth-child(1){
+    margin-right: 70px;
+}
+
+.h3-description, .h3-equipements{
+    background-color: #FF6060;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+.img-description{
+    position: absolute;
+    right: 20px;
+}
+
+.p-description, .ul-equipements{
+    background-color: #f7f7f7;
+    margin-top: 0;
+    color: #FF6060;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
 @media screen and (max-width: 750px) {
     .info {
         flex-direction: column;
@@ -117,5 +157,18 @@
         justify-content: space-between;
         flex-direction: row-reverse;
         align-items: center;
+    }
+    .etoile-logement{
+        width: 17px;
+        height: 17px;
+        margin-right: 7px;
+    }
+
+    .div-description-equipement{
+        flex-direction: column;
+    }
+
+    .div-description{
+        width: 100%;
     }
 }

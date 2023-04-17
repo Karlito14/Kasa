@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Caroussel from "./Caroussel";
 import Info from "./Info-logement";
+import Description from "./Description";
+import Equipements from "./Equipements";
 
 const Fiche = () => {
     // Je récupère le ID de la fiche sélectionnée
@@ -27,6 +29,11 @@ const Fiche = () => {
         <React.Fragment>
             <Caroussel location={locationSelected}/>
             <Info location={locationSelected} />
+            <div className="div-description-equipement">
+                <Description title='Description' description={locationSelected.description} />
+                <Equipements title='Equipements' description={locationSelected.equipments} />
+            </div>
+            
         </React.Fragment>
     )  
 }

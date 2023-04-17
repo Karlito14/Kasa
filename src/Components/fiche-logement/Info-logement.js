@@ -9,9 +9,16 @@ const Info = ({location}) => {
     const tags = location.tags;
     const note = location.rating;
     const hote = location.host;
+    
     const range = [1, 2, 3, 4, 5];
     const imgEtoile = <img src={etoile} alt="etoile-colorée" className="etoile-logement"/>
-    const etoileGrey = <img src={etoileGrise} alt="étoile-grise" />
+    const etoileGrey = <img src={etoileGrise} alt="étoile-grise" className="etoile-logement"/>
+    let notesEtoiles = range.map((rangeElement) => 
+        note >= rangeElement ? (
+            <span key={rangeElement.toString()}>{imgEtoile}</span>
+        ) : <span key={rangeElement.toString()}>{etoileGrey}</span>
+
+    )
 
     return (
         <div className="info">
@@ -21,7 +28,7 @@ const Info = ({location}) => {
                 <ul className="liste-tag">
                     {tags.map((tag, index) => {
                         return (
-                            <li key={index} className="tag-logement">{tag}</li>
+                            <li key={`${index}-${tag}`} className="tag-logement">{tag}</li>
                         )
                     })}
                 </ul>
@@ -32,11 +39,7 @@ const Info = ({location}) => {
                     <img src={hote.picture} alt="hote" className="img-hote"/>
                 </div>
                 <div className="div-etoiles">
-                    {range.map((rangeElement) => 
-                        note >= rangeElement ? (
-                            <span key={rangeElement.toString()}>{imgEtoile}</span>
-                        ) : null
-                    )}
+                    {notesEtoiles}
                 </div>
                 
             </div>
