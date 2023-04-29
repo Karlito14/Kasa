@@ -5,9 +5,9 @@ import '../../styles/main.css';
 
 const Container = () => {
     return (
-        <section className='container'>
+        <main className='container'>
            <Location /> 
-        </section>     
+        </main>     
     )
 }
 

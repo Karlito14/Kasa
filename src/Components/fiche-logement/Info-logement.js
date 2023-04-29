@@ -11,8 +11,10 @@ const Info = ({location}) => {
     const hote = location.host;
     
     const range = [1, 2, 3, 4, 5];
+
     const imgEtoile = <img src={etoile} alt="etoile-colorée" className="etoile-logement"/>
     const etoileGrey = <img src={etoileGrise} alt="étoile-grise" className="etoile-logement"/>
+    
     let notesEtoiles = range.map((rangeElement) => 
         note >= rangeElement ? (
             <span key={rangeElement.toString()}>{imgEtoile}</span>

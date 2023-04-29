@@ -6,6 +6,7 @@ import Fiche from './pages/Fiche-logement';
 import Error from './pages/Error';
 
 function App() {
+  
   return (
     <BrowserRouter>
       <Routes>

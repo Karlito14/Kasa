@@ -168,7 +168,7 @@
         flex-direction: column;
     }
 
-    .div-description{
+    .div-description, .div-equipements{
         width: 100%;
     }
 }

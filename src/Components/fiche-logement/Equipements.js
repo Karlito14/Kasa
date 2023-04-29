@@ -3,8 +3,8 @@ import flecheHaut from '../../images/fleche-haut.png';
 import flecheBas from '../../images/fleche-bas.png';
 import '../../styles/fiche-logement.css'
 
-const Equipements = ({title, description}) => {
-    const equipements = description;
+const Equipements = ({title, materiel}) => {
+    const equipements = materiel;
     const [isOpen, setIsOpen] = useState(true);
 
     return isOpen ? (

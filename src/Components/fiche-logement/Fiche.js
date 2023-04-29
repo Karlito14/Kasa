@@ -4,6 +4,7 @@ import Caroussel from "./Caroussel";
 import Info from "./Info-logement";
 import Description from "./Description";
 import Equipements from "./Equipements";
+import MainError from "../../Components/error/main-error";
 
 const Fiche = () => {
     // Je récupère le ID de la fiche sélectionnée
@@ -16,26 +17,35 @@ const Fiche = () => {
         fetch('/locations.json')
         .then(res => res.json())
         .then(data => {
-            setLocations(data)
-        });
+            setLocations(data);
+        })
+        .catch(error => {
+            console.error(error);
+          });
     },[]);
 
-    // J'utilise la méthode find pour récupérer l'objet qui correspond à mon ID
-    let locationSelected = locations.find(element => element.id === id);
-    
-    return locations.length === 0 ? (
-        <div><p>Loading...</p></div>
-    ) : (
-        <React.Fragment>
-            <Caroussel location={locationSelected}/>
-            <Info location={locationSelected} />
-            <div className="div-description-equipement">
-                <Description title='Description' description={locationSelected.description} />
-                <Equipements title='Equipements' description={locationSelected.equipments} />
-            </div>
-            
-        </React.Fragment>
-    )  
+    if(locations.length > 0) {
+        let locationSelected = locations.find(element => element.id === id);
+       
+        if(!locationSelected) { 
+            return <MainError />
+        } else {
+            return ( 
+                <React.Fragment>
+                    <Caroussel location={locationSelected}/>
+                    <Info location={locationSelected} />
+                    <div className="div-description-equipement">
+                        <Description title='Description' description={locationSelected.description} />
+                        <Equipements title='Equipements' materiel={locationSelected.equipments} />
+                    </div>        
+                </React.Fragment>
+            ) 
+        } 
+    } else {
+        return (
+            <div>loading...</div>
+        )
+    }    
 }
 
 export default Fiche;
