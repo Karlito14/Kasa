@@ -118,16 +118,6 @@ body{
     width: 48%;
 }
 
-.div-description{
-    width: 50%;
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.div-description:nth-child(1){
-    margin-right: 70px;
-}
-
 .h3-description{
     background-color: #FF6060;
     color: white;
@@ -178,7 +168,7 @@ body{
         flex-direction: column;
     }
 
-    .div-description, .div-equipements{
+    .div-description-equipement > div{
         width: 100%;
     }
 }
