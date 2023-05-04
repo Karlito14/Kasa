@@ -34,8 +34,8 @@ const Fiche = () => {
                     <Caroussel location={locationSelected}/>
                     <Info location={locationSelected} />
                     <div className="div-description-equipement">
-                        <Dropdown title='Description' data={locationSelected.description} className='h3-description' className2='h3-description' classP='p-description' classDiv='div-description'/>
-                        <Dropdown title='Equipements' data={locationSelected.equipments} className='h3-description' className2='h3-description' classP='p-description' classDiv='div-description'/>
+                        <Dropdown title='Description' data={locationSelected.description}/>
+                        <Dropdown title='Equipements' data={locationSelected.equipments} />
                     </div>        
                 </main>
             ) 
