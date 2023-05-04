@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import '../../styles/main.css';
+import Thumb from './Thumb';
 
 const Location = () =>{
     // Je récupère l'ensemble des locations avec useState et useEffect
@@ -18,12 +18,7 @@ const Location = () =>{
         <div className='ul-grid'>
             {locations.map(({id, title, cover}) => {
                 return (  
-                    <NavLink to={`/fiche/${id}`} key={id}>
-                        <figure className='figure-location'>
-                            <img className='img-location' src={cover} alt={title}/>
-                            <figcaption className='titre-location'>{title}</figcaption> 
-                        </figure> 
-                    </NavLink>  
+                    <Thumb key={id} title={title} cover={cover} id={id}/>
                 )
             })}
         </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import etoile from '../../images/etoile.svg';
 import etoileGrise from '../../images/etoile-grise.svg';
+import Tag from "./Tag";
 
 
 const Info = ({location}) => {
@@ -19,7 +20,6 @@ const Info = ({location}) => {
         note >= rangeElement ? (
             <span key={rangeElement.toString()}>{imgEtoile}</span>
         ) : <span key={rangeElement.toString()}>{etoileGrey}</span>
-
     )
 
     return (
@@ -30,7 +30,7 @@ const Info = ({location}) => {
                 <ul className="liste-tag">
                     {tags.map((tag, index) => {
                         return (
-                            <li key={`${index}-${tag}`} className="tag-logement">{tag}</li>
+                            <Tag tag={tag} index={index} key={index}/>
                         )
                     })}
                 </ul>
@@ -42,10 +42,8 @@ const Info = ({location}) => {
                 </div>
                 <div className="div-etoiles">
                     {notesEtoiles}
-                </div>
-                
-            </div>
-            
+                </div>     
+            </div> 
         </div>
     )
 };

@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Caroussel from "./Caroussel";
 import Info from "./Info-logement";
-import Description from "./Description";
-import Equipements from "./Equipements";
+import Dropdown from '../about/Dropdown';
 import MainError from "../../Components/error/main-error";
 
 const Fiche = () => {
@@ -31,14 +30,14 @@ const Fiche = () => {
             return <MainError />
         } else {
             return ( 
-                <React.Fragment>
+                <main>
                     <Caroussel location={locationSelected}/>
                     <Info location={locationSelected} />
                     <div className="div-description-equipement">
-                        <Description title='Description' description={locationSelected.description} />
-                        <Equipements title='Equipements' materiel={locationSelected.equipments} />
+                        <Dropdown title='Description' data={locationSelected.description} className='h3-description' className2='h3-description' classP='p-description' classDiv='div-description'/>
+                        <Dropdown title='Equipements' data={locationSelected.equipments} className='h3-description' className2='h3-description' classP='p-description' classDiv='div-description'/>
                     </div>        
-                </React.Fragment>
+                </main>
             ) 
         } 
     } else {

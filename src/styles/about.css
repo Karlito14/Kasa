@@ -1,14 +1,14 @@
 .div-dropdown{
     width: 80%;
     margin: 30px auto;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .div-dropdown ul {
     padding: 0;
 }
 
-.titre-deroulant{
+.h3-deroule{
     background-color: #FF6060;
     color: white;
     border-radius: 5px;
@@ -37,7 +37,7 @@
     border-radius: 5px;
 }
 
-.titre-deroulant span, .titre-deroule span {
+.h3-deroule span, .titre-deroule span {
     position: absolute;
     top: 10px;
     right: 16px;

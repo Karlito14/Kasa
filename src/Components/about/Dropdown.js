@@ -4,16 +4,27 @@ import flecheHaut from '../../images/fleche-haut.png';
 import '../../styles/about.css';
 import { useState } from 'react';
 
-const DropDown = ({ title, description }) => {
+const DropDown = ({ title, data, className, className2, classP }) => {
     const [isOpen, setIsOpen] = useState(false);
+
     return isOpen ? (
         <div>
-            <h3 className='titre-deroule' onClick={() => setIsOpen(false)}>{title} <span><img src={flecheHaut} alt='fleche-directionnel'/></span></h3>
-            <p className='p-deroulant'>{description}</p>
-        </div>
-         
+            <h3 className={className} onClick={() => setIsOpen(false)}>{title} <span><img src={flecheHaut} alt='fleche-directionnel'/></span></h3>
+            {typeof data === 'string' ? 
+                <p className={classP}>{data}</p> : 
+                <ul className='ul-equipements'>
+                    {data.map((element, index) => {
+                        return (
+                            <li key={`${index}-${element}`}>{element}</li>
+                        )
+                    })}
+                </ul> 
+            }         
+        </div>        
     ) : (
-        <h3 className='titre-deroulant' onClick={() => setIsOpen(true)}>{title} <span><img src={flecheBas} alt='fleche-directionnel'/></span></h3> 
+        <div>
+            <h3 className={className2} onClick={() => setIsOpen(true)}>{title} <span><img src={flecheBas} alt='fleche-directionnel'/></span></h3> 
+        </div>      
     )
 }
 

@@ -3,7 +3,7 @@
     justify-content: space-between;
     width: 90%;
     margin: 0 auto;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .logo-img img{
@@ -62,7 +62,7 @@
     opacity: 1;
     color: white;
     font-size: 3em;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 @media screen and (max-width: 750px) {
@@ -89,7 +89,7 @@
     }
 }
 
-@media screen and (max-width: 650px){
+@media screen and (max-width: 900px){
     .container .ul-grid {
         display: grid;
         grid-template-columns: 1fr;
