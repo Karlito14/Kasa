@@ -12,7 +12,7 @@ const DropDown = ({ title, data}) => {
             <h3 className='h3-description' onClick={() => setIsOpen(false)}>{title} <span><img src={flecheHaut} alt='fleche-directionnel'/></span></h3>
             {typeof data === 'string' ? 
                 <p className='p-description'>{data}</p> : 
-                <ul className='ul-equipements'>
+                <ul className='p-description'>
                     {data.map((element, index) => {
                         return (
                             <li key={`${index}-${element}`}>{element}</li>
