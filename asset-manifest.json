@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Kasa/static/css/main.88cb1725.css",
+    "main.js": "/Kasa/static/js/main.6624da27.js",
+    "static/media/banniere-about.png": "/Kasa/static/media/banniere-about.dc7a08e1faa2e14de0bd.png",
+    "static/media/IMG.jpg": "/Kasa/static/media/IMG.f4962aebe70eb02c8a7e.jpg",
+    "index.html": "/Kasa/index.html",
+    "static/media/etoile-grise.svg": "/Kasa/static/media/etoile-grise.68fd8a1ead5375bd59bb6ae0b633ffd3.svg",
+    "static/media/etoile.svg": "/Kasa/static/media/etoile.30b8963e66a47777ef47296f505567be.svg",
+    "static/media/suivant.svg": "/Kasa/static/media/suivant.88153a5d119c2744ffe34dca1ef843df.svg",
+    "static/media/precedent.svg": "/Kasa/static/media/precedent.19918a1634b1441a25ae0b50e6b1f85b.svg",
+    "main.88cb1725.css.map": "/Kasa/static/css/main.88cb1725.css.map",
+    "main.6624da27.js.map": "/Kasa/static/js/main.6624da27.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.88cb1725.css",
+    "static/js/main.6624da27.js"
+  ]
+}
