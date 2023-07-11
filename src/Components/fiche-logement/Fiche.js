@@ -13,7 +13,7 @@ const Fiche = () => {
     const [locations, setLocations] = useState([]);
     
     useEffect( () => {
-        fetch('/locations.json')
+        fetch('./locations.json')
         .then(res => res.json())
         .then(data => {
             setLocations(data);
