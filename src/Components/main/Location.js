@@ -7,7 +7,7 @@ const Location = () =>{
     const [locations, setLocations] = useState([]);
     
     useEffect(() => {
-        fetch('https://kasa-application.netlify.app/locations.json')
+        fetch('./locations.json')
         .then(res => res.json())
         .then((result) => {
             setLocations(result);

@@ -13,7 +13,7 @@ const Fiche = () => {
     const [locations, setLocations] = useState([]);
     
     useEffect( () => {
-        fetch('https://kasa-application.netlify.app/locations.json')
+        fetch('/locations.json')
         .then(res => res.json())
         .then(data => {
             setLocations(data);
@@ -22,6 +22,8 @@ const Fiche = () => {
             console.error(error);
           });
     },[]);
+
+    
 
     if(locations.length > 0) {
         let locationSelected = locations.find(element => element.id === id);
